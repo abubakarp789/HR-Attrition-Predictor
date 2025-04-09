@@ -80,9 +80,9 @@ def create_plots_directory():
     """
     Create directory for saving plots
     """
-    if not os.path.exists('plots'):
-        os.makedirs('plots')
-        print("Created 'plots' directory for saving visualizations")
+    if not os.path.exists('images'):
+        os.makedirs('images')
+        print("Created 'images' directory for saving visualizations")
 
 def plot_attrition_distribution(df):
     """
@@ -100,7 +100,7 @@ def plot_attrition_distribution(df):
     plt.title('Employee Turnover Distribution')
     plt.axis('equal')
     plt.tight_layout()
-    plt.savefig('plots/attrition_distribution_pie.png')
+    plt.savefig('images/attrition_distribution_pie.png')
     plt.close()
     
     # Bar Plot
@@ -110,10 +110,10 @@ def plot_attrition_distribution(df):
     plt.xlabel('Left Company')
     plt.ylabel('Count')
     plt.tight_layout()
-    plt.savefig('plots/attrition_distribution_bar.png')
+    plt.savefig('images/attrition_distribution_bar.png')
     plt.close()
     
-    print("Employee turnover distribution plots saved to 'plots' directory")
+    print("Employee turnover distribution plots saved to 'images' directory")
 
 def plot_correlation_heatmap(df):
     """
@@ -133,10 +133,10 @@ def plot_correlation_heatmap(df):
     sns.heatmap(corr_matrix, mask=mask, annot=True, cmap='coolwarm', fmt=".2f", linewidths=0.5)
     plt.title('Correlation Heatmap')
     plt.tight_layout()
-    plt.savefig('plots/correlation_heatmap.png')
+    plt.savefig('images/correlation_heatmap.png')
     plt.close()
     
-    print("Correlation heatmap saved to 'plots' directory")
+    print("Correlation heatmap saved to 'images' directory")
 
 def plot_job_satisfaction_vs_attrition(df):
     """
@@ -161,10 +161,10 @@ def plot_job_satisfaction_vs_attrition(df):
     plt.xlabel('Job Satisfaction Level')
     plt.ylabel('Count')
     plt.tight_layout()
-    plt.savefig('plots/job_satisfaction_vs_attrition.png')
+    plt.savefig('images/job_satisfaction_vs_attrition.png')
     plt.close()
     
-    print("Job Satisfaction vs Employee Turnover plot saved to 'plots' directory")
+    print("Job Satisfaction vs Employee Turnover plot saved to 'images' directory")
 
 def save_processed_data(df, output_path):
     """

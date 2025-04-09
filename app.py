@@ -255,9 +255,9 @@ def display_eda_page():
     
     # Display plots saved during EDA
     plot_paths = [
-        ("Turnover Distribution", "plots/attrition_distribution_pie.png"),
-        ("Job Satisfaction vs Turnover", "plots/job_satisfaction_vs_attrition.png"),
-        ("Correlation Heatmap", "plots/correlation_heatmap.png")
+        ("Turnover Distribution", "images/attrition_distribution_pie.png"),
+        ("Job Satisfaction vs Turnover", "images/job_satisfaction_vs_attrition.png"),
+        ("Correlation Heatmap", "images/correlation_heatmap.png")
     ]
     
     # Create two columns for displaying plots
@@ -270,7 +270,7 @@ def display_eda_page():
             st.subheader(title1)
             image1 = load_image(path1)
             if image1:
-                st.image(image1, use_container_width=True)
+                st.image(image1)
             else:
                 st.warning(f"Could not load image: {path1}")
         
@@ -281,7 +281,7 @@ def display_eda_page():
                 st.subheader(title2)
                 image2 = load_image(path2)
                 if image2:
-                    st.image(image2, use_container_width=True)
+                    st.image(image2)
                 else:
                     st.warning(f"Could not load image: {path2}")
     
@@ -330,27 +330,27 @@ def display_supervised_learning_page(model, preprocessed_data, model_metrics):
     
     with col1:
         st.subheader("Confusion Matrix")
-        confusion_matrix_img = load_image("plots/confusion_matrix.png")
+        confusion_matrix_img = load_image("images/confusion_matrix.png")
         if confusion_matrix_img:
-            st.image(confusion_matrix_img, use_container_width=True)
+            st.image(confusion_matrix_img)
     
     with col2:
         st.subheader("ROC Curve")
-        roc_curve_img = load_image("plots/roc_curve.png")
+        roc_curve_img = load_image("images/roc_curve.png")
         if roc_curve_img:
-            st.image(roc_curve_img, use_container_width=True)
+            st.image(roc_curve_img)
     
     # Display feature importance
     st.header("Feature Importance")
-    feature_importance_img = load_image("plots/feature_importance.png")
+    feature_importance_img = load_image("images/feature_importance.png")
     if feature_importance_img:
-        st.image(feature_importance_img, use_container_width=True)
+        st.image(feature_importance_img)
     
     # Decision Tree Visualization
     with st.expander("View Decision Tree Visualization"):
-        decision_tree_img = load_image("plots/decision_tree_plot.png")
+        decision_tree_img = load_image("images/decision_tree_plot.png")
         if decision_tree_img:
-            st.image(decision_tree_img, use_container_width=True)
+            st.image(decision_tree_img)
             st.caption("Click to enlarge decision tree visualization")
     
     # Make predictions on new data
@@ -441,16 +441,16 @@ def display_unsupervised_learning_page(kmeans_model, pca_model, cluster_profiles
     
     # Display elbow curve
     st.header("Optimal Number of Clusters")
-    elbow_img = load_image("plots/kmeans_elbow.png")
+    elbow_img = load_image("images/kmeans_elbow.png")
     if elbow_img:
-        st.image(elbow_img, use_container_width=True)
+        st.image(elbow_img)
         st.caption("Elbow method to determine the optimal number of clusters")
     
     # Display cluster visualization
     st.header("Cluster Visualization")
-    cluster_img = load_image("plots/kmeans_clusters.png")
+    cluster_img = load_image("images/kmeans_clusters.png")
     if cluster_img:
-        st.image(cluster_img, use_container_width=True)
+        st.image(cluster_img)
         st.caption("2D visualization of clusters using PCA dimensionality reduction")
     
     # Display cluster profiles
@@ -458,21 +458,21 @@ def display_unsupervised_learning_page(kmeans_model, pca_model, cluster_profiles
     
     if cluster_profiles is not None:
         # Display cluster sizes
-        cluster_sizes_img = load_image("plots/cluster_sizes.png")
+        cluster_sizes_img = load_image("images/cluster_sizes.png")
         if cluster_sizes_img:
-            st.image(cluster_sizes_img, use_container_width=True)
+            st.image(cluster_sizes_img)
             st.caption("Size of each cluster in the dataset")
         
         # Display turnover rates by cluster
-        turnover_rates_img = load_image("plots/cluster_turnover_rates.png")
+        turnover_rates_img = load_image("images/cluster_turnover_rates.png")
         if turnover_rates_img:
-            st.image(turnover_rates_img, use_container_width=True)
+            st.image(turnover_rates_img)
             st.caption("Turnover rates for each cluster")
         
         # Display cluster profiles
-        profile_img = load_image("plots/cluster_profiles.png")
+        profile_img = load_image("images/cluster_profiles.png")
         if profile_img:
-            st.image(profile_img, use_container_width=True)
+            st.image(profile_img)
             st.caption("Key characteristics of each cluster")
         
         # Show cluster profile details

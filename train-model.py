@@ -64,7 +64,7 @@ def plot_decision_tree_visualization(model, X_train, feature_names=None):
               filled=True, rounded=True, fontsize=10)
     plt.title('Decision Tree Visualization')
     plt.tight_layout()
-    plt.savefig('plots/decision_tree_plot.png', dpi=300, bbox_inches='tight')
+    plt.savefig('images/decision_tree_plot.png', dpi=300, bbox_inches='tight')
     plt.close()
     
 def plot_feature_importance(model, feature_names):
@@ -89,7 +89,7 @@ def plot_feature_importance(model, feature_names):
     plt.xlabel('Relative Importance')
     plt.title('Feature Importance')
     plt.tight_layout()
-    plt.savefig('plots/feature_importance.png')
+    plt.savefig('images/feature_importance.png')
     plt.close()
 
 def evaluate_model(model, X_test, y_test):
@@ -129,7 +129,7 @@ def evaluate_model(model, X_test, y_test):
     plt.ylabel('Actual')
     plt.xlabel('Predicted')
     plt.tight_layout()
-    plt.savefig('plots/confusion_matrix.png')
+    plt.savefig('images/confusion_matrix.png')
     plt.close()
     
     # Plot and save ROC curve
@@ -146,7 +146,7 @@ def evaluate_model(model, X_test, y_test):
     plt.title('Receiver Operating Characteristic (ROC) Curve')
     plt.legend(loc='lower right')
     plt.tight_layout()
-    plt.savefig('plots/roc_curve.png')
+    plt.savefig('images/roc_curve.png')
     plt.close()
     
     # Save detailed classification report
@@ -165,7 +165,7 @@ def save_model(model, filepath='models/decision_tree_model.pkl'):
 def main():
     # Ensure directories exist
     os.makedirs('models', exist_ok=True)
-    os.makedirs('plots', exist_ok=True)
+    os.makedirs('images', exist_ok=True)
     
     # Load preprocessed data
     df = load_preprocessed_data()

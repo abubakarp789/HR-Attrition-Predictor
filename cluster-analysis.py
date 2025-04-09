@@ -44,7 +44,7 @@ def find_optimal_clusters(data, max_k=15):
     plt.xticks(k_range)
     plt.grid(True)
     plt.tight_layout()
-    plt.savefig('plots/kmeans_elbow.png')
+    plt.savefig('images/kmeans_elbow.png')
     plt.close()
     
     # Return the optimal k (this is a simple heuristic)
@@ -119,7 +119,7 @@ def visualize_clusters(data, clusters, kmeans_model):
     plt.legend()
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig('plots/kmeans_clusters.png')
+    plt.savefig('images/kmeans_clusters.png')
     plt.close()
 
 def analyze_clusters(data_with_clusters, original_data):
@@ -208,7 +208,7 @@ def plot_cluster_profiles(profiles_df, key_features):
         axes[i].grid(True, alpha=0.3)
     
     plt.tight_layout()
-    plt.savefig('plots/cluster_profiles.png')
+    plt.savefig('images/cluster_profiles.png')
     plt.close()
     
     # Plot cluster sizes
@@ -220,7 +220,7 @@ def plot_cluster_profiles(profiles_df, key_features):
     plt.xticks(profiles_df['Cluster'])
     plt.grid(True, alpha=0.3)
     plt.tight_layout()
-    plt.savefig('plots/cluster_sizes.png')
+    plt.savefig('images/cluster_sizes.png')
     plt.close()
     
     # Plot turnover rate by cluster if available
@@ -233,13 +233,13 @@ def plot_cluster_profiles(profiles_df, key_features):
         plt.xticks(profiles_df['Cluster'])
         plt.grid(True, alpha=0.3)
         plt.tight_layout()
-        plt.savefig('plots/cluster_turnover_rates.png')
+        plt.savefig('images/cluster_turnover_rates.png')
         plt.close()
 
 def main():
     # Ensure directories exist
     os.makedirs('models', exist_ok=True)
-    os.makedirs('plots', exist_ok=True)
+    os.makedirs('images', exist_ok=True)
     os.makedirs('data', exist_ok=True)
     
     # Load preprocessed data
