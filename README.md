@@ -1,7 +1,8 @@
 # 🏢 HR Attrition Predictor
 
-🎯 Predict employee attrition, understand workforce trends, and support HR strategies with an intuitive and interactive ML-powered dashboard.
+🎯 This project aims to analyze employee attrition using data science techniques to identify patterns, predict turnover risk, and generate insights for HR decision-makers. The notebook combines preprocessing, exploratory data analysis, predictive modeling, and cluster analysis to provide a comprehensive understanding of factors influencing employee attrition.
 
+This project is the final project and part of my GDGoC FAST Peshawar AI/ML Fellowship 2025.
 ---
 
 ## 🚀 Overview
