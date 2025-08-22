@@ -41,7 +41,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/abubakarp789/HR-Attrition-Predictor.git
    cd HR-Attrition-Predictor
    ```
 
@@ -137,7 +137,6 @@ HR-Attrition-Predictor/
 │   ├── correlation_heatmap.png
 │   ├── cluster_analysis_plots.png
 │   └── ...
-├── 📁 venv/                          # Virtual environment (ignored by git)
 ├── 📁 uploads/                       # Temporary upload directory
 ├── 🐍 app.py                         # Flask backend application
 ├── 🔧 requirements.txt               # Python dependencies
